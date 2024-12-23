@@ -1,0 +1,79 @@
+
+
+INCLUDE conections to Database
+INCLUDE possible functions
+
+BEGIN html
+    SET language to "en"
+
+    BEGIN head
+        
+        SET title to "SurfSphere"
+        INCLUDE Bootstrap CSS
+        INCLUDE custom CSS 
+
+    END head
+
+    BEGIN body
+        
+        BEGIN header
+             
+            BEGIN navigation bar
+                BEGIN container
+                    
+                    DISPLAY logo image 
+                    DISPLAY title "SurfSphere"
+                           
+                    BEGIN navbar links
+                        CREATE link "Home" that redirects to #home
+                        CREATE link "About" that redirects to #about
+                        CREATE link "Login" that redirects to #login
+                        
+                        BEGIN search form
+                            CREATE input field for "Search..."
+                            CREATE search button
+                        END search form
+                    END navbar links
+                END container
+            END nav
+        END header
+
+            Main content
+        BEGIN main
+            
+            BEGIN section with class "hero"
+                DISPLAY welcome message 
+                BEGIN row
+                    BEGIN column for carousel
+                        BEGIN carousel container
+
+                        END carousel
+                    END carousel container
+                END column
+                    
+                   
+                    BEGIN column for promotional content
+                        DISPLAY 
+                        CREATE "Sign Up" button 
+                    END column
+                END row
+            END section
+
+            // Features Section
+            BEGIN section with class "features"
+                BEGIN feature container
+                
+                END feature container
+            END section
+
+        END main
+
+            Footer section
+        BEGIN footer
+            DISPLAY copyright notice with current year
+        END footer
+
+        INCLUDE jQuery
+        INCLUDE Bootstrap JS
+    END body
+END html

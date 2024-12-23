@@ -1,0 +1,51 @@
+BEGIN Registration Page
+
+    
+    START SESSION
+    INCLUDE database and function files
+
+    SET page title 
+
+Check if the registration form is submitted
+    IF form is submitted (POST) THEN
+        
+        GET userName from POST
+        GET userEmail from POST
+        HASH userPassword
+
+Check if the username already exists in the database
+        SET sql query to check for existing userName
+        EXECUTE query
+
+        IF user exists THEN
+            DISPLAY "Username already taken. Please choose a different one."
+        ELSE
+            Insert new user into the database
+            SET sql query to insert user data
+            EXECUTE insert query
+
+            
+            IF insert successful THEN
+                
+                GET memberID of the newly inserted user
+
+        Assign default role to the new user
+                SET sql query to assign default role
+                EXECUTE role assignment query
+
+                IF role assignment successful THEN
+                    DISPLAY success message and redirect to login page
+                ELSE
+                    DISPLAY error message for registration
+                END IF
+            
+    END IF
+
+INCLUDE Header
+
+    // Display registration form
+    DISPLAY registration form with fields for username, email, and password
+
+include footer
+
+END Registration Page

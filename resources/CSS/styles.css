@@ -1,0 +1,289 @@
+/*
+ Title: CSS page
+ Created by: Orlando Caetano
+ Date: 05/10/2024 
+ Updated: 17/10/2024
+ Discription: This stylesheet defines the visual design and layout for the SurfSphere website. It includes custom styles for the navigation bar, hero section, carousel, search bar, 
+              buttons, typography, and page elements such as features and posts. It also integrates custom fonts ('Surfbars' and 'SurfsUp'), and defines responsive behaviors for 
+              layout components using Flexbox and Grid systems. Additionally, there are styles applied to buttons and forms to maintain consistency across the platform.
+ Resourses: All the resources used are listed in <a href="../References.pdf" target="_blank">References</a>.see About page
+*/
+
+/* Logo Image Styling */
+.logo-image {
+    max-width: 100px; 
+    height: auto; 
+}
+ 
+/* Body Styling */
+body {
+  background-image: url('../images/ines-alvarez-fdez-u6rZ2_bUgUE-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Search Bar Placeholder Styling */
+.search-bar::placeholder {
+  font-family: 'Surfbars', Arial, sans-serif;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  max-width: 200px; 
+  display: inline;
+}
+
+/* Navbar Form Styling */
+.navbar-nav .form-inline {
+  margin-left: 20px;
+}
+
+/* Main Heading (h1) Styling */
+h1 {
+  font-size: 38px !important; 
+  font-family: 'Surfbars', Arial, sans-serif;
+  display: inline; 
+  white-space: nowrap; 
+}
+
+/* Highlighted Span within h1 (For larger "S") */
+h1 span {
+  font-size: 52px; 
+  font-weight: bold; 
+}
+
+/* General Typography Styling for Text Elements */
+h1, h3, h2, p {
+  color: #001862;
+}
+
+/* Navbar Branding and Link Styling */
+.navbar-brand, .nav-link, .nav-link:hover {
+  color: #001862 !important;
+}
+
+.nav-link {
+  font-weight: bold; 
+  font-size: 28px;
+  font-family: 'Surfbars', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Adjust Navbar Link Spacing */
+.navbar-nav {
+  gap: 20px; 
+}
+
+/* Form Styling in Navbar */
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Search Button Styling */
+.search-button {
+  background-color: #001862;
+  border-color: #001862;
+  font-family: 'Surfbars', Arial, sans-serif;;
+}
+
+/* Hero Section Heading (h1) Styling */
+.hero h1 {
+  margin-left: 250px ;
+  margin-top: 60px; 
+}
+
+/* Carousel Container Styling */
+.carousel-container {
+  width: 900px; 
+  margin: 40px auto; 
+  padding: 20px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-left: 0;
+}
+
+/* Styling for Text in Column (First Paragraph) */
+.col-md-4 p:first-child {
+  font-size: 32px; 
+  font-family: 'Surfbars', Arial, sans-serif;
+}
+
+/* Styling for Second Paragraph */
+.col-md-4 p:nth-child(2) {
+  font-size: 22px; 
+}
+
+/* Sign-Up Button Styling */
+.signup-button{
+  background-color: #001862;
+  border-color: #001862;
+  font-family: 'Surfbars', Arial, sans-serif;
+}
+
+/* Column Styling */
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.col-md-4 button {
+  width: 90%;
+  font-family: 'Surfbars', Arial, sans-serif;
+  font-size: 32px;
+}
+
+/* Features Section Styling */
+.feature-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature {
+  flex-basis: 30%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-top: 0;
+  font-family:'Surfbars', Arial, sans-serif;;
+}
+
+.feature p {
+  margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f0f0f0; 
+  padding: 10px;
+  text-align: center;
+  color: #001862; 
+  border-top: 1px solid #ddd; 
+  font-family: 'Surfbars', Arial, sans-serif;
+  font-size: 22px;
+}
+
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Surfbars';
+  src: url('../resources/fonts/Surfbars.woff2') format('woff2'),
+       url('../resources/fonts/MyCustomFont.woff') format('woff'),
+       url('../resources/fonts/Surfbars.otf') format('opentype'),
+       url('../resources/fonts/Surfbars.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SurfsUp';
+  src: url('../resources/fonts/SurfsUp.woff2') format('woff2'),
+       url('../resources/fonts/SurfsUp.woff') format('woff'),
+       url('../resources/fonts/SurfsUp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Styling for Registration Page Header */
+.styleRegister {
+  font-family: 'Surfbars', Arial, sans-serif; 
+  color: #001862; 
+  font-size: 42px;
+}
+
+/* Form Label Styling */
+form .form-label {
+  font-size: 18px; 
+  color: #001862; 
+}
+
+/* Register Button Styling */
+.register-button {
+  background-color: #001862; 
+  border-color: #001862; 
+  font-family: 'Surfbars', Arial, sans-serif; 
+  padding:  5px 30px; 
+  font-size: 25px; 
+  border-radius: 5px; 
+}
+
+/* Post Grid Styling */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Post Card Styling */
+.post-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-card .caption {
+  margin-top: 10px;
+}
+
+/* dashboard Post Card Styling */
+.post-card {
+  background-color: rgb(255, 255, 255, 0.2); 
+  border-radius: 10px; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* dashboard comment Styling */
+.comments-section {
+  background-color: rgba(255, 255, 255, 0.7); 
+  border-radius: 10px; 
+  padding: 10px; 
+  margin-top: 10px; 
+}
+
+.card {
+  background-color: rgb(255, 255, 255, 0.7); 
+  border-radius: 10px; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+}
+
+/* About page Modal Custom Styles */
+.modal-header {
+  background-color: #001862; 
+  color: white; 
+  font-family: 'Surfbars', Arial, sans-serif; 
+}
+
+.modal-body {
+  background-color: #f8f9fa; 
+  color: #333; 
+}
+
+.modal-footer {
+  background-color: #f1f1f1;
+}
